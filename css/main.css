@@ -3,17 +3,6 @@ body {
     width: 70%;
 }
 
-.left {
-    display: inline-block;
-    
-}
-.right {
-    display: inline-block;
-}
-
-#photo {
-    border-radius: 50%;
-}
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;

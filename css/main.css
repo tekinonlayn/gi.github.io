@@ -12,6 +12,9 @@ body {
     color: #ffffff;
     
 }
+#photo {
+    border-radius: 50%;
+}
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
@@ -19,7 +22,7 @@ nav ul, footer ul {
     font-weight: bold;
 }
 nav ul li, footer ul li {
-    display: inline-block;
+    display: inline;
     margin-right: 20px;
 }
 a {

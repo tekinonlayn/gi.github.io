@@ -3,12 +3,12 @@ body {
     width: 70%;
 }
 
-nav-div {
+.nav-div {
     width: 70%;
     height: 30px;
     margin: 5px;
     padding: 5px;
-    color: #ff1a1a;
+    background-color: #ff1a1a;
     
 }
 nav ul, footer ul {

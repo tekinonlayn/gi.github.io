@@ -43,7 +43,7 @@ Gradient Descent'in her adımında bütün örneklerin (m) alınmasıyla paramet
 <tr><td class="tr-caption" style="text-align: center;">Şekil-2. Gradient Descent şeması</td></tr>
 </table>
 
-Temel olarak gradient descent'in yaptığı iş şekil-2'de görülmektedir. Başlangıç parametreleri, $$\mathrm J$$ fonksiyonunun o noktadaki $$\mathrm\theta$$ değerine göre türevi alınarak güncellenmektedir. [Şekil-2 şu <a href="http://sebastianraschka.com/" target="_blank">kaynaktan</a> değiştirilmiştir.]
+Temel olarak gradient descent'in yaptığı iş şekil-2'de görülmektedir. Başlangıç parametreleri, $$\mathrm J$$ fonksiyonunun o noktadaki $$\mathrm\theta$$ değerine göre türevi alınarak güncellenmektedir. (Şekil-2 şu <a href="http://sebastianraschka.com/" target="_blank">kaynaktan</a> değiştirilmiştir.)
 
 Parametrelerin güncellenmesiyle cost fonksiyonu tekrar hesaplanır ve bu işlem en uygun $$\mathrm\theta$$ parametreleri bulununcaya kadar devam eder.
 

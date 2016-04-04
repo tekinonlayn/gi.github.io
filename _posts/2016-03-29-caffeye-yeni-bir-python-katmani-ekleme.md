@@ -40,15 +40,15 @@ input_shape {
 }
 
 layer {
-name: "ekle10"
-type: "Python"
-bottom: "data"
-top: "ekle10_output"
-python_param {
-  module: "Ekle10Modul"
-  layer: "Ekle10Layer"
-}
-loss_weight: 1
+  name: "ekle10"
+  type: "Python"
+  bottom: "data"
+  top: "ekle10_output"
+  python_param {
+    module: "Ekle10Modul"
+    layer: "Ekle10Layer"
+  }
+  loss_weight: 1
 }</pre>
 Bu oluşturduğumuz prototxt iki tane katmandan oluşuyor. İlki bir adet 4-Boyutlu tensor. Bu tensor sadece bir değer içerecek. İkinci katman ise basit bir şekilde birinci katmandan gelen değere 10 ekleyip çıkışa verecek. Oluşturduğumuz ağ (net) aşağıda görülüyor.
 <table align="center">
@@ -62,11 +62,12 @@ Verilen girdiye 10 ekleyen katmanı şimdi yazabiliriz:<br /><br />
 <pre class="prettyprint">
 import caffe
 class Ekle10Layer(caffe.Layer):
+    
     #Girdiye 10 ekleyen python katmanı.
     def setup(self, bottom, top):
         pass
     
-    #girdi boyutlarını caffe'nin kendi boyutlarına uydurmamız gerekiyor.'''
+    #girdi boyutlarını caffe'nin kendi boyutlarına uydurmamız gerekiyor.
     def reshape(self, bottom, top):
         top[0].reshape(bottom[0].num, bottom[0].channels,
          bottom[0].height, bottom[0].width)

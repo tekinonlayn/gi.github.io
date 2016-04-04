@@ -9,15 +9,14 @@ Caffe'de yeni bir katman eklemek kolaydır. Hele bir de python katmanı eklenece
 Baştan itibaren bir python katmanı nasıl eklenir, sırasıyla yazalım:<br />
 <span style="background-color: #cccccc;"><b>1.</b>&nbsp;<i>/include/caffe/python_layer.hpp</i></span><br />
 python_layer.hpp başlık dosyasının gerekli dizinde olması gerekir, yoksa eğer kendimiz elle oluşturacağız. (<a href="https://github.com/longjon/caffe/commit/a48990d5951e4c5d286b7d0dfdf04b8afa9cfb62" target="_blank">url</a>)
-<br />
+<br /><br />
 <span style="background-color: #cccccc;"><b>2.</b> <i>/src/caffe/layer_factory.cpp</i></span><br />
-bu dosyada python_layer için gerekli düzenlemeleri yapmamız gerekir. Eğer Caffe'yi son sürümde kullanıyorsanız değişiklik yapmaya gerek yok.
-<br />
+bu dosyada python_layer için gerekli düzenlemeleri yapmamız gerekir. Eğer Caffe'yi son sürümde kullanıyorsanız değişiklik yapmaya gerek yok.<br /><br />
 <span style="background-color: #cccccc;"><b>3.</b> <i>/src/caffe/layers/python_layer.cpp</i></span><br />
 dosyası (eğer yoksa) gösterilen dizinde oluşturulmalıdır. Bu dosya da son sürümle beraber geliyor. (<a href="https://github.com/longjon/caffe/commit/a48990d5951e4c5d286b7d0dfdf04b8afa9cfb62" target="_blank">url</a>)
-<br />
+<br /><br />
 <span style="background-color: #cccccc;"><b>4.</b> <i>/src/caffe/proto/caffe.proto</i></span><br />
-protobuffer dosyası son sürümle beraber geldiği için değişiklik yapmaya gerek kalmıyor.<br />
+protobuffer dosyası son sürümle beraber geldiği için değişiklik yapmaya gerek kalmıyor.<br /><br />
 <span style="background-color: #cccccc;"><b>5.</b> <i>Makefile.config</i> dosyasında</span><br />
 WITH_PYTHON_LAYER := 1 satırındaki yorum işleci kaldırılmalıdır.<br />
 <br />
@@ -28,9 +27,7 @@ make all
 make test
 make runtest
 </pre>
-komutları verilmelidir. <br />
-Buraya kadar anlatılanlar python katmanı oluşturmak için altyapıyı kurmak içindi. Şimdi python katmanı oluşturmaya başlayabiliriz.<br />
-İşe örnek bir prototxt oluşturmakla başlayalım:<br /><br />
+komutları verilmelidir. Buraya kadar anlatılanlar python katmanı oluşturmak için altyapıyı kurmak içindi. Şimdi python katmanı oluşturmaya başlayabiliriz. İşe örnek bir prototxt oluşturmakla başlayalım:<br /><br />
 <i>"Ekle10.prototxt"</i>
 <pre class="prettyprint">
 name: 'Ekle10'
@@ -68,8 +65,8 @@ class Ekle10Layer(caffe.Layer):
     #Girdiye 10 ekleyen python katmanı.
     def setup(self, bottom, top):
         pass
-
-    '''girdi boyutlarını caffe'nin kendi boyutlarına uydurmamız gerekiyor.'''
+    
+    #girdi boyutlarını caffe'nin kendi boyutlarına uydurmamız gerekiyor.'''
     def reshape(self, bottom, top):
         top[0].reshape(bottom[0].num, bottom[0].channels,
          bottom[0].height, bottom[0].width)
@@ -77,7 +74,7 @@ class Ekle10Layer(caffe.Layer):
     #Sadece forward işlemi yapılacak.
     def forward(self, bottom, top):
         top[0].data[...] = bottom[0].data + 10
-
+    
     #Gradient hesabı olmayacağı için backward yapmaya da gerek yok.
     def backward(self, top, propagate_down, bottom):
         pass

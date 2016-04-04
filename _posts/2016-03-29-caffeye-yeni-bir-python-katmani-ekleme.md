@@ -6,7 +6,7 @@ date: 2016-03-29
 Caffe'de temel hesaplama birimleri katmanlardır. Her katmanın kendine özgü görevleri vardır. Bir hesaplama yapmak isterseniz, o hesabın yapıldığı katmanı, oluşturmuş olduğunuz ağa (net) eklemeniz yeterlidir.<br />
 Caffe ile birlikte gelen makine öğrenmesinde kullanılabilecek birçok fonksiyon/katman mevcut. Ancak bazen sizin istediğiniz bir işi, var olan fonksiyonlar yerine getirmeyebilir. Ya da sizin probleminize özgü bir fonksiyon yazılması gerekebilir. Bu durumda yeni bir katman eklemekten başka çare yoktur.<br />
 Caffe'de yeni bir katman eklemek kolaydır. Hele bir de python katmanı eklenecekse bu daha da kolaydır.<br />
-Baştan itibaren bir python katmanı nasıl eklenir, sırasıyla yazalım:<br />
+Baştan itibaren bir python katmanı nasıl eklenir, sırasıyla yazalım:<br /><br />
 <span style="background-color: #cccccc;"><b>1.</b>&nbsp;<i>/include/caffe/python_layer.hpp</i></span><br />
 python_layer.hpp başlık dosyasının gerekli dizinde olması gerekir, yoksa eğer kendimiz elle oluşturacağız. (<a href="https://github.com/longjon/caffe/commit/a48990d5951e4c5d286b7d0dfdf04b8afa9cfb62" target="_blank">url</a>)
 <br /><br />

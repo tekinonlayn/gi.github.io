@@ -13,7 +13,7 @@ Bu formülde $$\mathrm h(\mathrm x)$$ fonksiyonuna hipotez fonksiyonu denilmekte
 <img src="/img/linear_regression.png" text-align="center"></td></tr>
 <tr><td class="tr-caption" style="text-align: center;">Şekil-1. Hipotez fonksiyonu</td></tr>
 </table>
-Şekil-1'de X eksenindeki değerler bizim girdi değerlerimiz (mesela öğrencilerin sınavlardaki not ortalaması), Y eksenindekiler (mesela öğrencilerin bir sonraki sınavda aldığı not) de bunlara karşılık gelen değerler olsun. Buradaki amaç, kırmızı ile gösterilen ve girdi değerlerini en iyi temsil eden doğruya ulaşmak. Öğrencilerin belirli bir zamana kadar yapılan sınavlardaki not ortalaması X değerlerini oluşturursa, bir sonraki sınavda alacağı notu da Y değerlerini verecektir. Makine öğrenmesi diliyle anlatırsak, böyle bir durumda X ve Y değerleriyle (eğitim seti) eğitilen fonksiyon, daha önceden görmediği bir girdiye karşılık gelen değeri tahmin edebilir.
+Şekil-1'de X eksenindeki değerler bizim girdi değerlerimiz (mesela öğrencilerin sınavlardaki not ortalaması), Y eksenindekiler (mesela öğrencilerin bir sonraki sınavda aldığı not) de bunlara karşılık gelen değerler olsun. Buradaki amaç, kırmızı ile gösterilen ve girdi değerlerini en iyi temsil eden doğruya ulaşmak. Öğrencilerin belirli bir zamana kadar yapılan sınavlardaki not ortalaması X değerlerini oluşturursa, bir sonraki sınavda alacağı notu da Y değerlerini verecektir. Makine öğrenmesi diliyle anlatırsak, böyle bir durumda X ve Y değerleriyle (eğitim seti) eğitilen fonksiyon, daha önceden görmediği bir girdiye karşılık gelen değeri tahmin edebilir. (Şekil-1 <a href="https://en.wikipedia.org/wiki/Linear_regression" target="_blank">şuradan</a> alınmıştır.)
  
 Basitlik olması için $${\mathrm\theta}_0\;=\;0$$ olarak alırsak, fonksiyon orijinden geçen bir doğru fonksiyonuna dönmektedir:
 <p>$${\mathrm h}_\mathrm\theta(\mathrm x)\;=\;{\mathrm\theta}_1\;\mathrm x$$</p>
@@ -43,7 +43,7 @@ Gradient Descent'in her adımında bütün örneklerin (m) alınmasıyla paramet
 <tr><td class="tr-caption" style="text-align: center;">Şekil-2. Gradient Descent şeması</td></tr>
 </table>
 
-Temel olarak gradient descent'in yaptığı iş şekil-2'de görülmektedir. Başlangıç parametreleri, $$\mathrm J$$ fonksiyonunun o noktadaki $$\mathrm\theta$$ değerine göre türevi alınarak güncellenmektedir. [Şu kaynaktan değiştirilmiştir: http://sebastianraschka.com/]
+Temel olarak gradient descent'in yaptığı iş şekil-2'de görülmektedir. Başlangıç parametreleri, $$\mathrm J$$ fonksiyonunun o noktadaki $$\mathrm\theta$$ değerine göre türevi alınarak güncellenmektedir. [Şekil-2 şu <a href="http://sebastianraschka.com/" target="_blank">kaynaktan</a> değiştirilmiştir.]
 
 Parametrelerin güncellenmesiyle cost fonksiyonu tekrar hesaplanır ve bu işlem en uygun $$\mathrm\theta$$ parametreleri bulununcaya kadar devam eder.
 

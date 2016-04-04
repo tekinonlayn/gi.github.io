@@ -8,5 +8,5 @@ caption {
     caption-side: bottom;
 }
 </style>
-<img src="/img/linear_regression.png/" caption="resim altı">
+<img src="/img/linear_regression.png/" caption="resim altı"><br />
 Well. This is firs blog post with Jekyll - powered by [Jekyll](http://jekyllrb.com) 

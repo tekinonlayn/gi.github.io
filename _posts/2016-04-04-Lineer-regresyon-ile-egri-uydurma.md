@@ -8,7 +8,11 @@ date: 2016-04-04
 <p>$${\mathrm h}_\mathrm\theta(\mathrm x)\;=\;{\mathrm\theta}_0\;+\;{\mathrm\theta}_1\;\mathrm x$$ </p>
 Bu formülde $$\mathrm h(\mathrm x)$$ fonksiyonuna hipotez fonksiyonu denilmektedir. Genel olarak hipotez, ortaya atılan ve daha sonra yapılan deneylerle değiştirilen savlara denir. Makine öğrenmesine uyarlayacak olursak hipotez, verilen girdi değerine karşılık fonksiyonun verdiği cevaptır. Bu cevap, örneklerle (deneyler) birlikte değiştirilir ya da daha doğru tabirle güncellenir. En sonda elde edilen hipotez, genelleştirilmiş olan, örnekleri en iyi temsil eden hipotez olur.
 
-<img src="/img/linear_regression.png" text-align="center" caption="Şekil-1"><br />
+<table align="center">
+<tr><td style="text-align: center;">
+<img src="/img/linear_regression.png" text-align="center"></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Şekil-1.</td></tr>
+</table>
 Şekil-1'de X eksenindeki değerler bizim girdi değerlerimiz (mesela öğrencilerin sınavlardaki not ortalaması), Y eksenindekiler (mesela öğrencilerin bir sonraki sınavda aldığı not) de bunlara karşılık gelen değerler olsun. Buradaki amaç, kırmızı ile gösterilen ve girdi değerlerini en iyi temsil eden doğruya ulaşmak. Öğrencilerin belirli bir zamana kadar yapılan sınavlardaki not ortalaması X değerlerini oluşturursa, bir sonraki sınavda alacağı notu da Y değerlerini verecektir. Makine öğrenmesi diliyle anlatırsak, böyle bir durumda X ve Y değerleriyle (eğitim seti) eğitilen fonksiyon, daha önceden görmediği bir girdiye karşılık gelen değeri tahmin edebilir.
  
 Basitlik olması için $${\mathrm\theta}_0\;=\;0$$ olarak alırsak, fonksiyon orijinden geçen bir doğru fonksiyonuna dönmektedir:
@@ -24,9 +28,8 @@ Bu formülle gösterilen fonksiyonda, m eğitim için kullanılan örnek çiftle
 Yukarıdaki formülde bütün eğitim seti (m) örnekleri için cost fonksiyonunu bulduk. Peki en küçük cost değerini nasıl bulacağız?
 Bunun için çokça kullanılan ve çeşitli türleri de geliştirilen Gradient Descent adı verilen bir optimizasyon-arama algoritması kullanacağız. Bu algoritma, adı üzerinde (gradient = türev) cost fonksiyonunun kısmi türevi alınarak parametrelerin ($$\mathrm\theta$$) güncellenmesine dayanır. Böylelikle cost fonksiyonu minimuma düşmekte ve örnekleri en iyi temsil eden doğru için Teta parametreleri bulunmaktadır (*:Asıl amaç).
 
-Gradient Descent Algoritmasının çalışması şöyle olur:
-En küçük parametre ($$\mathrm\theta$$) değerine ulaşıncaya kadar tekrar et<br />
-{
+Gradient Descent Algoritmasının çalışması şöyle olur:<br />
+En küçük parametre ($$\mathrm\theta$$) değerine ulaşıncaya kadar tekrar et {
 <p>$${\mathrm\theta}_1\;:=\;{\mathrm\theta}_1\;-\mathrm\alpha\;\frac{\partial(\mathrm J({\mathrm\theta}_1))}{\partial{\mathrm\theta}_1}$$</p>
 }
 
@@ -35,7 +38,7 @@ Yukarıdaki formülde Cost fonksiyonunun $$\mathrm\theta$$ parametresine göre k
 Gradient Descent'in her adımında bütün örneklerin (m) alınmasıyla parametreler yeni değerine güncellenir. Burada ":=" ifadesi matematiksel eşiklik için değil, atama operatörü olarak kullanılır. $$\mathrm\alpha$$ değeri öğrenme katsayısı (learning rate) olarak bilinir ve genelde sıfıra yakın değerler seçilir. 
 
 <img src="/img/gradient_descent.png" text-align="center" caption="Şekil-2"><br />
-Temel olarak gradient descent'in yaptığı iş şekil-2'de görülmektedir. Başlangıç parametreleri, J fonksiyonunun o noktadaki $$\mathrm\theta$$ değerine göre türevi alınarak güncellenmektedir. [Şu kaynaktan değiştirilmiştir: http://sebastianraschka.com/]
+Temel olarak gradient descent'in yaptığı iş şekil-2'de görülmektedir. Başlangıç parametreleri, $$\mathrm J$$ fonksiyonunun o noktadaki $$\mathrm\theta$$ değerine göre türevi alınarak güncellenmektedir. [Şu kaynaktan değiştirilmiştir: http://sebastianraschka.com/]
 
 Parametrelerin güncellenmesiyle cost fonksiyonu tekrar hesaplanır ve bu işlem en uygun $$\mathrm\theta$$ parametreleri bulununcaya kadar devam eder.
 

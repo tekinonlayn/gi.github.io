@@ -30,8 +30,8 @@ make runtest
 </pre>
 komutları verilmelidir. <br />
 Buraya kadar anlatılanlar python katmanı oluşturmak için altyapıyı kurmak içindi. Şimdi python katmanı oluşturmaya başlayabiliriz.<br />
-İşe örnek bir prototxt oluşturmakla başlayalım:<br />
-<i>"Ekle10.prototxt"</i><br />
+İşe örnek bir prototxt oluşturmakla başlayalım:<br /><br />
+<i>"Ekle10.prototxt"</i>
 <pre class="prettyprint">
 name: 'Ekle10'
 input: 'data'
@@ -53,40 +53,36 @@ python_param {
 }
 loss_weight: 1
 }</pre>
-Bu oluşturduğumuz prototxt iki tane katmandan oluşuyor. İlki bir adet 4-Boyutlu tensor. Bu tensor sadece bir değer içerecek.<br />
-İkinci katman ise basit bir şekilde birinci katmandan gelen değere 10 ekleyip çıkışa verecek.<br />
-Oluşturduğumuz ağ (net) aşağıda görülüyor.<br />
+Bu oluşturduğumuz prototxt iki tane katmandan oluşuyor. İlki bir adet 4-Boyutlu tensor. Bu tensor sadece bir değer içerecek. İkinci katman ise basit bir şekilde birinci katmandan gelen değere 10 ekleyip çıkışa verecek. Oluşturduğumuz ağ (net) aşağıda görülüyor.
 <table align="center">
 <tr><td style="text-align: center;">
 <img src="/img/sampleNet_prototxt.png" text-align="center"></td></tr>
 <tr><td class="tr-caption" style="text-align: center;">Şekil-1. Oluşan ağın görüntüsü</td></tr>
 </table>
 
-Verilen girdiye 10 ekleyen katmanı şimdi yazabiliriz:<br />
-<i>"Ekle10Modul.py"</i><br />
+Verilen girdiye 10 ekleyen katmanı şimdi yazabiliriz:<br /><br />
+<i>"Ekle10Modul.py"</i>
 <pre class="prettyprint">
 import caffe
 class Ekle10Layer(caffe.Layer):
- #Girdiye 10 ekleyen python katmanı.
-def setup(self, bottom, top):
-pass
+    #Girdiye 10 ekleyen python katmanı.
+    def setup(self, bottom, top):
+        pass
 
- #girdi boyutlarını caffe'nin kendi
- #boyutlarına uydurmamız gerekiyor.
+    '''girdi boyutlarını caffe'nin kendi boyutlarına uydurmamız gerekiyor.'''
+    def reshape(self, bottom, top):
+        top[0].reshape(bottom[0].num, bottom[0].channels,
+         bottom[0].height, bottom[0].width)
+    
+    #Sadece forward işlemi yapılacak.
+    def forward(self, bottom, top):
+        top[0].data[...] = bottom[0].data + 10
 
-def reshape(self, bottom, top):
-top[0].reshape(bottom[0].num, bottom[0].channels,
-bottom[0].height, bottom[0].width)
- #Sadece forward işlemi yapılacak.
-def forward(self, bottom, top):
- top[0].data[...] = bottom[0].data + 10
-
- #Gradient hesabı olmayacağı için
- #backward yapmaya da gerek yok.
- def backward(self, top, propagate_down, bottom):
- pass
+    #Gradient hesabı olmayacağı için backward yapmaya da gerek yok.
+    def backward(self, top, propagate_down, bottom):
+        pass
 </pre>
-python katmanının kodunu da yazdığımıza ($PYTHONPATH içinde olmasına dikkat edin) göre doğru çalışıp çalışmadığını kontrol edelim:<br />
+Python katmanının kodunu da yazdığımıza ($PYTHONPATH içinde olmasına dikkat edin) göre doğru çalışıp çalışmadığını kontrol edelim:<br />
 <pre class="prettyprint">
 import caffe
 import numpy as np

@@ -4,7 +4,7 @@ title: "Makine Öğrenmesi İçin Lineer Regresyon İle Eğri Uydurma"
 date: 2016-04-04
 ---
 
-İlk yazımızda makine öğrenmesinde çokça kullanılan lineer Regresyon ile doğru bulma (eğri uydurma) yöntemini anlatacağız. Bunun için öncelikle lineer regresyon fonksiyonunu tanımlayalım:
+Bu yazımızda makine öğrenmesinde çokça kullanılan lineer Regresyon ile doğru bulma (eğri uydurma) yöntemini anlatacağız. Bunun için öncelikle lineer regresyon fonksiyonunu tanımlayalım:
 <p>$${\mathrm h}_\mathrm\theta(\mathrm x)\;=\;{\mathrm\theta}_0\;+\;{\mathrm\theta}_1\;\mathrm x$$ </p>
 Bu formülde $$\mathrm h(\mathrm x)$$ fonksiyonuna hipotez fonksiyonu denilmektedir. Genel olarak hipotez, ortaya atılan ve daha sonra yapılan deneylerle değiştirilen savlara denir. Makine öğrenmesine uyarlayacak olursak hipotez, verilen girdi değerine karşılık fonksiyonun verdiği cevaptır. Bu cevap, örneklerle (deneyler) birlikte değiştirilir ya da daha doğru tabirle güncellenir. En sonda elde edilen hipotez, genelleştirilmiş olan, örnekleri en iyi temsil eden hipotez olur.
 
@@ -40,7 +40,7 @@ Gradient Descent'in her adımında bütün örneklerin (m) alınmasıyla paramet
 <table align="center">
 <tr><td style="text-align: center;">
 <img src="/img/gradient_descent.png" text-align="center"></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Şekil-2</td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Şekil-2. Gradient Descent şeması</td></tr>
 </table>
 
 Temel olarak gradient descent'in yaptığı iş şekil-2'de görülmektedir. Başlangıç parametreleri, $$\mathrm J$$ fonksiyonunun o noktadaki $$\mathrm\theta$$ değerine göre türevi alınarak güncellenmektedir. [Şu kaynaktan değiştirilmiştir: http://sebastianraschka.com/]

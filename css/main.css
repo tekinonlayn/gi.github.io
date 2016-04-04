@@ -5,10 +5,12 @@ body {
 
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    border-bottom: 1px solid #d5d5d5;
     padding: 0px;
     list-style: none;
     font-weight: bold;
+}
+nav {
+    border-bottom: 1px solid #d5d5d5;
 }
 nav ul li, footer ul li {
     display: inline;

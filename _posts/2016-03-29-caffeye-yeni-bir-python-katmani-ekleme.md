@@ -2,11 +2,10 @@
 layout: post
 title: "Caffe'ye yeni bir Python katmanı ekleme"
 date: 2016-03-29
-excerpt: 
 <!--more-->
 Caffe'de temel hesaplama birimleri katmanlardır. Her katmanın kendine özgü görevleri vardır.
 <!--more-->
-
+---
 Caffe'de temel hesaplama birimleri katmanlardır. Her katmanın kendine özgü görevleri vardır. Bir hesaplama yapmak isterseniz, o hesabın yapıldığı katmanı, oluşturmuş olduğunuz ağa (net) eklemeniz yeterlidir.<br />
 Caffe ile birlikte gelen makine öğrenmesinde kullanılabilecek birçok fonksiyon/katman mevcut. Ancak bazen sizin istediğiniz bir işi, var olan fonksiyonlar yerine getirmeyebilir. Ya da sizin probleminize özgü bir fonksiyon yazılması gerekebilir. Bu durumda yeni bir katman eklemekten başka çare yoktur.<br />
 Caffe'de yeni bir katman eklemek kolaydır. Hele bir de python katmanı eklenecekse bu daha da kolaydır.<br />

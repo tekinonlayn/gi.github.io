@@ -4,7 +4,7 @@ title: "Makine Öğrenmesi İçin Lineer Regresyon İle Eğri Uydurma"
 date: 2016-04-04
 ---
 
-Bu yazımızda makine öğrenmesinde çokça kullanılan Lineer Regresyon ile doğru bulma (eğri uydurma) yöntemini anlatacağız. Bunun için öncelikle lineer regresyon fonksiyonunu tanımlayalım:
+Bu yazımızda makine öğrenmesinde çokça kullanılan Lineer Regresyon ile doğru bulma (eğri uydurma) yöntemini anlatacağız.<!--more--> Bunun için öncelikle lineer regresyon fonksiyonunu tanımlayalım:
 <p>$${\mathrm h}_\mathrm\theta(\mathrm x)\;=\;{\mathrm\theta}_0\;+\;{\mathrm\theta}_1\;\mathrm x$$ </p>
 Bu formülde $$\mathrm h(\mathrm x)$$ fonksiyonuna hipotez fonksiyonu denilmektedir. Genel olarak hipotez, ortaya atılan ve daha sonra yapılan deneylerle değiştirilen savlara denir. Makine öğrenmesine uyarlayacak olursak hipotez, verilen girdi değerine karşılık fonksiyonun verdiği cevaptır. Bu cevap, örneklerle (deneyler) birlikte değiştirilir ya da daha doğru tabirle güncellenir. En sonda elde edilen hipotez, genelleştirilmiş olan, örnekleri en iyi temsil eden hipotez olur.
 

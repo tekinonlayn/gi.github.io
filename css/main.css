@@ -48,3 +48,7 @@ ul.posts li {
     margin-bottom: 20px;
 }
 
+ul.post.date {
+    color: #333;
+}
+

@@ -3,7 +3,7 @@ layout: post
 title: "Caffe'ye yeni bir Python katmanı ekleme"
 date: 2016-03-29
 ---
-<!--more-->
+Excerpt
 Caffe'de temel hesaplama birimleri katmanlardır. Her katmanın kendine özgü görevleri vardır.
 <!--more-->
 

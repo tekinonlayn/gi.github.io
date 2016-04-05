@@ -3,7 +3,7 @@ layout: post
 title: "Ufak Bir Lineer Cebir Numarası"
 date: 2016-04-03
 ---
-$$\mathrm A$$ matris, $$\mathrm x$$ ve $$\mathrm b$$ ise vektörlerimizi gösteren değişkenler olsun.
+$$\mathrm A$$ matris, $$\mathrm x$$ ve $$\mathrm b$$ ise vektörlerimizi gösteren değişkenler olsun.<!--more-->
 <p>$$\mathrm{Ax}\;=\;\mathrm b$$</p>
 Eşitliğinde $$\mathrm A$$ matrisi ile $$\mathrm b$$ vektörünün bilindiğini varsayalım. O halde $$\mathrm x$$ vektörünü şöyle bulabiliriz.
 <p>$$

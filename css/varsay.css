@@ -29,6 +29,7 @@ body {
     height: 500px;
     float: right;
     margin-right:5%;
+    padding-top: 10px;
     padding-left: 15px;
     text-align: right;
     display: inline-block;

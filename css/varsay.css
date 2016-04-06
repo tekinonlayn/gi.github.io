@@ -77,6 +77,10 @@ nav ul, footer ul {
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
+    
+}
+footer ul li {
+    text-align: right;
 }
 a {
     text-decoration: none;

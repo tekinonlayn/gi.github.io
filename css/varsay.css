@@ -1,6 +1,19 @@
 body {
     margin: 40px auto;
-    width: 100%;
+    /*width: 100%;*/
+}
+#sol {
+    width: 200px;
+    float: left;
+    top: 40px;
+    background-color: red;
+    
+}
+#main {
+    width: 700px;
+    float: right;
+    top: 40px;
+    background-color: #e60000;
 }
 
 nav ul, footer ul {

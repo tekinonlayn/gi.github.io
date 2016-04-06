@@ -16,7 +16,7 @@ body {
 }
 #isim {
     margin-right: 15px;
-    float: right;
+    /*float: right;*/
 }
 #main {
     width: 50%;

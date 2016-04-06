@@ -30,7 +30,7 @@ body {
     float: right;
     margin-right:7%;
     display: inline-block;
-    background-color: green;
+    /*background-color: green;*/
     border-left: 1px solid #d5d5d5;
 }
 

@@ -75,6 +75,11 @@ nav ul, footer ul {
     list-style: none;
     font-weight: bold;
 }
+
+nav {
+    border-bottom: 1px solid #d5d5d5;
+}
+
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;

@@ -11,7 +11,7 @@ body {
     top: 40px;
     display: inline-block;
    /* background-color: green;*/
-    border-right: 1px solid gray;
+    border-right: 1px solid #d5d5d5;
     
 }
 
@@ -27,7 +27,7 @@ body {
 
 #foto {
     width: 160px;
-    height: 180px;
+    height: 200px;
     border-bottom: 1px solid black;
     /*border-radius: 50px;*/
     margin-top: 15px;

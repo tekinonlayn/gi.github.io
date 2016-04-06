@@ -28,6 +28,7 @@ body {
     width: 20%;
     height: 500px;
     float: right;
+    margin-right:15px;
     display: inline-block;
     background-color: green;
     border-left: 1px solid #d5d5d5;

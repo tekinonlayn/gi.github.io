@@ -7,17 +7,18 @@ body {
     width: 20%;
     height: 500px;
     float: left;
-    padding: 15px;
+    padding: 10px;
     top: 40px;
     display: inline-block;
    /* background-color: green;*/
     border-right: 1px solid gray;
     
 }
-#isim {
+/*#isim {
     margin-right: 15px;
     text-align: right;
     /*float: right;*/
+    */
 }
 #main {
     width: 50%;

@@ -8,7 +8,7 @@ body {
     float: left;
     top: 40px;
     display: inline;
-    background-color: red;
+    background-color: green;
     
 }
 #main {
@@ -17,7 +17,7 @@ body {
     float: right;
     top: 40px;
     display: inline;
-    background-color: #e60000;
+    background-color: blue;
 }
 
 nav ul, footer ul {

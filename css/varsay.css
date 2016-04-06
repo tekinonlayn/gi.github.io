@@ -24,6 +24,12 @@ body {
     display: inline-block;
     /*background-color: yellow;*/
 }
+#sag {
+    width: 20%;
+    float: right;
+    display: inline-block;
+    background-color:green;
+}
 
 #foto {
     width: 160px;

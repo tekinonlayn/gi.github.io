@@ -4,15 +4,19 @@ body {
 }
 #sol {
     width: 200px;
+    height: 500px;
     float: left;
     top: 40px;
+    display: inline;
     background-color: red;
     
 }
 #main {
     width: 700px;
+    height: 500px;
     float: right;
     top: 40px;
+    display: inline;
     background-color: #e60000;
 }
 

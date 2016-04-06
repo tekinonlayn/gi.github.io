@@ -30,18 +30,22 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
+    float: right;
+    margin-right: 15px;
     
 }
 
 #bilgi {
     width: 160px;
     height: 60px;
+    float: right;
+    margin-right: 15px;
     
     
 }
 #foto img {
     border: 1px solid black;
-    border-radius: 150px;
+    border-radius: 200px;
 }
 
 nav ul, footer ul {

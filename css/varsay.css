@@ -16,11 +16,12 @@ body {
 }
 #isim {
     margin-right: 15px;
+    text-align: center;
     /*float: right;*/
 }
 #main {
     width: 50%;
-    height: 500px;
+    /*height: 500px;*/
     /*float: right;*/
     padding: 15px;
     top: 40px;

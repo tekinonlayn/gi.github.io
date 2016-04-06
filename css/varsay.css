@@ -1,5 +1,6 @@
 body {
     margin: 10px auto;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     /*width: 100%;*/
 }
 #sol {
@@ -15,6 +16,7 @@ body {
 }
 #sol p {
     margin-right: 15px;
+    float: right;
 }
 #main {
     width: 50%;

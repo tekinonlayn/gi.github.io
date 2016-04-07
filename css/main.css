@@ -47,6 +47,6 @@ ul.posts li {
     list-style: none;
     margin-bottom: 20px;
 }
-posts p {
+.post p {
     text-align: justify;
 }

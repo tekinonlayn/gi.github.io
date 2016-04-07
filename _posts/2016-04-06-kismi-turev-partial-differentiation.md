@@ -6,7 +6,8 @@ date: 2016-04-06
 Hep söylenir, makine öğrenmesi matematiksel olarak kısmi türeve ve lineer cebire dayanır.<!--more--> Matematiksel işlem yapılacaksa ya bu ikisi kullanılır ya da basitçe lise düzeyindeki matematikten yararlanılır. O halde makine öğrenmesi ve buna dayalı olan teknikleri derinine öğrenebilmemiz için lineer cebir ve türevi iyi biliyor olmamız gerekir. Bunlar bilinmeden de sadece bize gösterilen sonuç formülünü bilgisayara hesaplatabiliriz ancak neyin nereden geldiğini bilebilmemiz için, bu gibi konularda derinleşmemiz gerekir. Birkaç gün önce yazdığımız lineer cebir ile ilgili <a href="/blog/2016/04/03/ufak-bir-lineer-cebir-numarasi">yazıdan</a> sonra şimdi de kısmi türev konusuna giriş yapabiliriz. 
 
 <b>Kısmi Türev</b><br />
-$$\f$$, iki veya daha fazla bağımsız değişkenin fonksiyonu olsun. Kısmi türev; $$f$$ fonksiyonun, bağımsız değişkenlerinin herhangi bir yöndeki değişim oranlarına bağlı olarak gösterdiği değişimin bulunmasıdır.
+
+$$f$$, iki veya daha fazla bağımsız değişkenin fonksiyonu olsun. Kısmi türev; $$f$$ fonksiyonun, bağımsız değişkenlerinin herhangi bir yöndeki değişim oranlarına bağlı olarak gösterdiği değişimin bulunmasıdır.
 
 $$f(x,\;y)$$ gibi iki değişkenli bir fonksiyonumuz olsun. $$f$$'in $$x$$'e göre kısmi türevi, normal türev kurallarının uygulanmasıyla bulunur. Normal türev kurallarından tek farkı, ikinci değişken $$y$$'ye sabit sayı muamelesi yapılır. $$f$$'in $$y$$'ye göre kısmi türevinde de, yine aynı şekilde bu sefer $$x$$'e sanki sabit bir sayıymış gibi muamele yapılır. Sabit bir sayının türevi sıfırdır. Çarpmada sabit sayı türev dışına çıkarılır, kalanların türevi alınır.
 
@@ -50,4 +51,4 @@ $$f$$ fonksiyonunun $$t$$'ye göre kısmi türevi şöyle bulunur:
 <p>$$\frac{\operatorname df}{\operatorname dt}\;=\;\frac{\partial f}{\partial x}\frac{\operatorname dx}{\operatorname dt}\;+\;\frac{\partial f}{\partial y}\frac{\operatorname dy}{\operatorname dt}$$</p>
 Türevde zincir kuralı özellikle backpropagation algoritması için vazgeçilmezdir. Hatanın geriye yayılması tamamen türevin zincir kuralı uygulanarak yapılır.
 
-Örnekler <a href="http://www.math.psu.edu/tseng/class/Math251/Notes-Partial%20Differentiation.pdf"şuradan</a> alınmıştır. 
+Örnekler <a href="http://www.math.psu.edu/tseng/class/Math251/Notes-Partial%20Differentiation.pdf">şuradan</a> alınmıştır. 

@@ -3,7 +3,7 @@ layout: post
 title: "Makine Öğrenmesi'nde Kısmi Türev"
 date: 2016-04-06
 ---
-Hep söylenir, makine öğrenmesi matematiksel olarak kısmi türeve ve lineer cebire dayanır.<!--more--> Matematiksel işlem yapılacaksa ya bu ikisi kullanılır ya da basitçe lise düzeyindeki matematikten yararlanılır. O halde makine öğrenmesi ve buna dayalı olan teknikleri derinine öğrenebilmemiz için lineer cebir ve türevi iyi biliyor olmamız gerekir. Bunlar bilinmeden de sadece bize gösterilen sonuç formülünü bilgisayara hesaplatabiliriz ancak neyin nereden geldiğini bilebilmemiz için, bu gibi konularda derinleşmemiz gerekir. Birkaç gün önce yazdığımız lineer cebir ile ilgili <a href="/2016/04/03/ufak-bir-lineer-cebir-numarasi">yazıdan</a> sonra şimdi de kısmi türev konusuna giriş yapabiliriz. 
+Hep söylenir, makine öğrenmesi matematiksel olarak kısmi türeve ve lineer cebire dayanır.<!--more--> Matematiksel işlem yapılacaksa ya bu ikisi kullanılır ya da basitçe lise düzeyindeki matematikten yararlanılır. O halde makine öğrenmesi ve buna dayalı olan teknikleri derinine öğrenebilmemiz için lineer cebir ve türevi iyi biliyor olmamız gerekir. Bunlar bilinmeden de sadece bize gösterilen sonuç formülünü bilgisayara hesaplatabiliriz ancak neyin nereden geldiğini bilebilmemiz için, bu gibi konularda derinleşmemiz gerekir. Birkaç gün önce yazdığımız lineer cebir ile ilgili <a href="/blog/2016/04/03/ufak-bir-lineer-cebir-numarasi">yazıdan</a> sonra şimdi de kısmi türev konusuna giriş yapabiliriz. 
 
 <b>Kısmi Türev</b>
 $$\mathrm f$$, iki veya daha fazla bağımsız değişkenin fonksiyonu olsun. Kısmi türev; f fonksiyonun, bağımsız değişkenlerinin herhangi bir yöndeki değişim oranlarına bağlı olarak gösterdiği değişimin bulunmasıdır.

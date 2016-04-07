@@ -27,8 +27,8 @@ body {
 #sag {
     width: 15%;
     height: 500px;
-    /*float: right;*/
-    margin-right:5%;
+    float: right;
+    margin-right:6%;
     padding-top: 10px;
     padding-left: 15px;
     text-align: right;

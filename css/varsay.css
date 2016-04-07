@@ -123,3 +123,6 @@ ul.posts li {
 caption {
     caption-side: bottom;
 }
+.blurb {
+    text-align: justify;
+}

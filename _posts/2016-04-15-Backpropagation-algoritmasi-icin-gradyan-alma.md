@@ -15,21 +15,14 @@ Bir fonksiyonun gradyanını almak, değişkenlerin fonksiyon sonucuna ne düzey
 <p>$$\frac{\partial f}{\partial x}\;=\;y$$</p>
 Bu demektir ki, $$x$$'in sonuca etkisi $$y$$'nin değerine bağlıdır. Aynı şekilde: 
 <p>$$\frac{\partial f}{\partial y}\;=\;x$$</p>Kısmi türevinden görüleceği gibi $$y$$'nin de sonuca etkisi $$x$$'in değerine bağlıdır.
-$$(3,-2)$$ değerlerine sahip bir $$f$$ fonksiyonunda; $$x$$'in kısmisi $$-2$$ olurken, $$y$$'nin kısmisi $$3$$ olacaktır. Peki bu gradyanlar bu fonksiyon için ne anlama gelir?<br /> 
-$$\underset{h\rightarrow0}{lim}$$ iken $$x$$ değeri, $$h$$ değeri kadar arttırılırsa, fonksiyonun sonucu $$2h$$ kadar azalır, ya da tam tersi; $$x$$ değeri, $$h$$ kadar azaltılırsa, fonksiyonun sonucu $$2h$$ kadar artar. $$x$$'in kısmisinin önündeki negatiflik $$(-2)$$ bu zıtlığı göstermektedir.
+$$(3,-2)$$ değerlerine sahip bir $$f$$ fonksiyonunda; $$x$$'in kısmisi $$-2$$ olurken, $$y$$'nin kısmisi $$3$$ olacaktır. Peki bu gradyanlar bu fonksiyon için ne anlama gelir? $$\underset{h\rightarrow0}{lim}$$ iken $$x$$ değeri, $$h$$ değeri kadar arttırılırsa, fonksiyonun sonucu $$2h$$ kadar azalır, ya da tam tersi; $$x$$ değeri, $$h$$ kadar azaltılırsa, fonksiyonun sonucu $$2h$$ kadar artar. $$x$$'in kısmisinin önündeki negatiflik $$(-2)$$ bu zıtlığı göstermektedir.
 
 Devre üzerindeki yerel gradyanları teker teker çarpmak aslında <a href="/blog/2016/04/06/kismi-turev-partial-differentiation">kısmi türevde zincir kuralının</a> devre sonundan başına doğru uygulanmasından başka bir şey değildir.
 
 Gradyanları kolaylıkla bulmak için önerilen bir yöntem vardır. Otomatik türev alma adı verilen yöntemle karmaşık fonksiyonlar küçük fonksiyonlara bölünür ve bu fonksiyonların sonucu ara değişkenlerde tutulur. Bu ara değişkenlerse diğer fonksiyonlarda bir değişken gibi işlev görür. Bu yöntemi bir örnekle açıklayalım:
-
-$$f(x,y,z)\;=\:(x+y)z$$<br />
-üç değişkenli fonksiyonumuz olsun.
-$$h\;=\;x+y$$<br />
-eşitliğiyle <br />
-$$(x + y)$$ <br />
-sonucunu bir ara değişkende tutarsak,
-$$f(h,z)\;=\:hz$$<br /> 
-gibi bir fonksiyon elde ederiz.
+<p>$$f(x,y,z)\;=\:(x+y)z$$</p> üç değişkenli fonksiyonumuz olsun.
+<p>$$h\;=\;x+y$$</p> eşitliğiyle $$(x + y)$$ sonucunu bir ara değişkende tutarsak,
+<p>$$f(h,z)\;=\:hz$$</p> gibi bir fonksiyon elde ederiz.
 Böylelikle $$f(x,y,z)$$ fonksiyonu, toplama ve çarpmadan oluşan ayrı fonksiyonlar halinde düşünülerek yerel gradyanlar alınır ve daha sonra zincir kuralı uygulanabilir. Peki, o halde yukarıdaki fonksiyonun yerel gradyanlarını almaya başlayalım:
 <p>$$f(h,z)\;=\:hz$$</p>
 <p>$$\frac{\partial f}{\partial h}=z\;\;\;ve\;\;\;\frac{\partial f}{\partial z}=h$$</p>

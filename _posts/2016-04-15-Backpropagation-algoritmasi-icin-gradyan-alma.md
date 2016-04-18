@@ -48,14 +48,14 @@ Fonksiyonları temel olarak toplama, çarpma ve max işlemlerine (fonksiyonları
 <table align="center">
 <tr><td style="text-align: center;">
 <img src="/img/sum.png" text-align="center"></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Şekil-1. Toplama fonksiyonu</td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Şekil-2. Toplama fonksiyonu</td></tr>
 </table>
 <h2>Max (Maximum alma):</h2>
 <p>$$f(x,y)=\underset{(x>y)}{max(x,y)},\;\;\;\;\frac{\partial f}{\partial x}=1,\;\;\;\;\;\frac{\partial f}{\partial y}=0$$</p>
 <table align="center">
 <tr><td style="text-align: center;">
 <img src="/img/max.png" text-align="center"></td></tr>
-<tr><td class="tr-caption" style="text-align: center;">Şekil-1. Max fonksiyonu</td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Şekil-3. Max fonksiyonu</td></tr>
 </table>
 
 [1] <a href="https://en.wikipedia.org/wiki/Gradient_descent">Gradient Descent</a><br>

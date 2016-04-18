@@ -38,12 +38,12 @@ olarak bulunur. Ara değişken kullanmadan $$f$$ fonksiyonunun $$x$$'e göre kı
 <p>$$\begin{array}{l}f(x,y,z)=(x+y)z\\f(x,y,z)=xz+yz\\Buradan\;f'in\;x'e\;k\i smisi\;al\i nd\i ğ\i nda\;z'yi\;sabit\;olarak\;düşünebiliriz.\\O\;halde;\\\frac{\partial f}{\partial x}=z\end{array}$$</p>  olduğu görülmüş olur. Bu fonksiyonun kısmi türevlerini bulmak kolaydır ancak fonksiyon karmaşıklaştıkça gradyanlarını bulmak hem zor hem de zaman alıcı olacaktır. Bu yüzden karmaşık fonksiyonların gradyanlarını bulmak için aradeğişkenler kullanılır ve bu aradeğişkenlerin gradyanlarına zincir kuralı uygulanarak çarpılır ve global gradyan bulunmuş olur. 
 
 Fonksiyonları temel olarak toplama, çarpma ve max işlemlerine (fonksiyonlarına) dönüştürerek ifade edebiliriz. Bu işlemler makine öğrenmesi algoritmalarında sıkça kullanılırlar. Bu fonksiyonlar ve yerel gradyanları devre üzerinde nasıl gösterilir, verip bitirelim. 
-Çarpma:
+<h2>Çarpma:</h2>
 <p>$$f(x,y)=xy,\;\;\;\;\;\frac{\partial f}{\partial x}=y,\;\;\;\;\;\frac{\partial f}{\partial y}=x$$</p>
 <img src="/img/multiply.png"><br />
-Toplama:
+<h2>Toplama:</h2>
 <p>$$f(x,y)=x+y,\;\;\;\;\;\frac{\partial f}{\partial x}=1,\;\;\;\;\;\frac{\partial f}{\partial y}=1$$</p>
 <img src="/img/sum.png"><br />
-Max (Maximum alma):
+<h2>Max (Maximum alma):</h2>
 <p>$$f(x,y)=\underset{(x>y)}{max(x,y)},\;\;\;\;\frac{\partial f}{\partial x}=1,\;\;\;\;\;\frac{\partial f}{\partial y}=0$$</p>
 <img src="/img/max.png">

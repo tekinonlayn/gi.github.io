@@ -39,11 +39,11 @@ olarak bulunur. Ara değişken kullanmadan $$f$$ fonksiyonunun $$x$$'e göre kı
 
 Fonksiyonları temel olarak toplama, çarpma ve max işlemlerine (fonksiyonlarına) dönüştürerek ifade edebiliriz. Bu işlemler makine öğrenmesi algoritmalarında sıkça kullanılırlar. Bu fonksiyonlar ve yerel gradyanları devre üzerinde nasıl gösterilir, verip bitirelim. 
 Çarpma:
-$$f(x,y)=xy,\;\;\;\;\;\frac{\partial f}{\partial x}=y,\;\;\;\;\;\frac{\partial f}{\partial y}=x$$
-<img src="/img/multiply.png">
+<p>$$f(x,y)=xy,\;\;\;\;\;\frac{\partial f}{\partial x}=y,\;\;\;\;\;\frac{\partial f}{\partial y}=x$$</p>
+<img src="/img/multiply.png"><br />
 Toplama:
-$$f(x,y)=x+y,\;\;\;\;\;\frac{\partial f}{\partial x}=1,\;\;\;\;\;\frac{\partial f}{\partial y}=1$$
-<img src="/img/sum.png">
+<p>$$f(x,y)=x+y,\;\;\;\;\;\frac{\partial f}{\partial x}=1,\;\;\;\;\;\frac{\partial f}{\partial y}=1$$</p>
+<img src="/img/sum.png"><br />
 Max (Maximum alma):
-$$f(x,y)=\underset{(x>y)}{max(x,y)},\;\;\;\;\frac{\partial f}{\partial x}=1,\;\;\;\;\;\frac{\partial f}{\partial y}=0$$ 
+<p>$$f(x,y)=\underset{(x>y)}{max(x,y)},\;\;\;\;\frac{\partial f}{\partial x}=1,\;\;\;\;\;\frac{\partial f}{\partial y}=0$$</p>
 <img src="/img/max.png">

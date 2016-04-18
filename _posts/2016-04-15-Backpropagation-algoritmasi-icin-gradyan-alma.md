@@ -58,6 +58,6 @@ Fonksiyonları temel olarak toplama, çarpma ve max işlemlerine (fonksiyonları
 <tr><td class="tr-caption" style="text-align: center;">Şekil-1. Max fonksiyonu</td></tr>
 </table>
 
-[1] <a href="https://en.wikipedia.org/wiki/Gradient_descent">Gradient Descent</a> 
-[2] <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Stochastic Gradient Descent</a>
+[1] <a href="https://en.wikipedia.org/wiki/Gradient_descent">Gradient Descent</a><br>
+[2] <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Stochastic Gradient Descent</a><br>
 [3] <a href="http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf">Mini-Batch Gradient Descent</a>

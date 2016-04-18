@@ -45,13 +45,25 @@ olduğu görülür. Bu fonksiyonun kısmi türevlerini bulmak kolaydır ancak fo
 Fonksiyonları temel olarak toplama, çarpma ve max işlemlerine (fonksiyonlarına) dönüştürerek ifade edebiliriz. Bu işlemler makine öğrenmesi algoritmalarında sıkça kullanılırlar. Bu fonksiyonlar ve yerel gradyanları devre üzerinde nasıl gösterilir, verip bitirelim. 
 <h2>Çarpma:</h2>
 <p>$$f(x,y)=xy,\;\;\;\;\;\frac{\partial f}{\partial x}=y,\;\;\;\;\;\frac{\partial f}{\partial y}=x$$</p>
-<div><img src="/img/multiply.png"></div>
+<table align="center">
+<tr><td style="text-align: center;">
+<img src="/img/multiply.png" text-align="center"></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Şekil-1. Çarpma fonksiyonu</td></tr>
+</table>
 <h2>Toplama:</h2>
 <p>$$f(x,y)=x+y,\;\;\;\;\;\frac{\partial f}{\partial x}=1,\;\;\;\;\;\frac{\partial f}{\partial y}=1$$</p>
-<div><img src="/img/sum.png"></div>
+<table align="center">
+<tr><td style="text-align: center;">
+<img src="/img/sum.png" text-align="center"></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Şekil-1. Toplama fonksiyonu</td></tr>
+</table>
 <h2>Max (Maximum alma):</h2>
 <p>$$f(x,y)=\underset{(x>y)}{max(x,y)},\;\;\;\;\frac{\partial f}{\partial x}=1,\;\;\;\;\;\frac{\partial f}{\partial y}=0$$</p>
-<div><img src="/img/max.png"></div>
+<table align="center">
+<tr><td style="text-align: center;">
+<img src="/img/max.png" text-align="center"></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Şekil-1. Max fonksiyonu</td></tr>
+</table>
 
 [1] <a href="https://en.wikipedia.org/wiki/Gradient_descent">Gradient Descent</a> 
 [2] <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Stochastic Gradient Descent</a>

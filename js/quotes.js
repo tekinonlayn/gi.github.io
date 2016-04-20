@@ -1,7 +1,7 @@
 var quotes = [[]];
 
 quotes[0] = ["A mathematical formula should never be \"owned\" by anybody! Mathematics belong to God.", "Donald Knuth"];
-quotes[1] = ["If we knew what it was we were doing, it would not be called research, wouldt it?", "Albert Einstein"];
+quotes[1] = ["If we knew what it was we were doing, it would not be called research, would it?", "Albert Einstein"];
 quotes[2] = ["If 10 years from now, when you are doing something quick and dirty, you suddenly visualize that I am " +
 "looking over your shoulders and say to yourself: 'Dijkstra would not have liked this', well that would be enough " +
 "immortality for me.", "Edsger Dijkstra"];

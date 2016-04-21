@@ -3,7 +3,7 @@ layout: post
 title: "Backpropagation Algoritması İçin Temel Gradyan Alma İşlemleri"
 date: 2016-04-15
 ---
-Makine Öğrenmesi'nde backpropagation gibi optimizasyon algoritmalarında sonuç bulunur ve hata geriye doğru işletilerek minimize edilmeye çalışılır.<!--more--> Hatanın geriye doğru işlemesini sağlamak için girdi (input) değerlerine göre kısmi türevler alınır. Sonucun (hatanın) girdilere göre alınmış kısmi türevlerine özel olarak gradyan deniyor. 
+Makine Öğrenmesi'nde backpropagation gibi öğrenme algoritmalarında sonuç bulunur ve hata geriye doğru işletilerek minimize edilmeye çalışılır.<!--more--> Hatanın geriye doğru işlemesini sağlamak için girdi (input) değerlerine göre kısmi türevler alınır. Sonucun (hatanın) girdilere göre alınmış kısmi türevlerine özel olarak gradyan deniyor. 
 
 Bilindiği gibi hatayı minimize etmek aslında bir optimizasyon meselesidir. Geçen yazılarımızdan <a href="/blog/2016/04/04/Lineer-regresyon-ile-egri-uydurma">birinde</a> hatayı (cost) bulduktan sonra en aza çekebilmek için bir arama (search) işleminin yapıldığından bahsetmiştik. Bu arama $$\theta$$ ile $$J(\theta)$$ ikili uzayında yapılır ve $$J(\theta)$$'nın $$\theta$$'ya göre değişimine bakılır. Bu arama işi, temel olarak en küçük $$J(\theta)$$ değerinin "bir şekilde" saklanmasıyla ya da en küçük değerinin aranıp bulunmasıyla olabilir, ancak milyonluk ya da milyarlık bir dizide arama yapmanın maliyeti çok yüksektir. Bu yüzden türev alma tekniğiyle matematiksel olarak $$J(\theta)$$'nın en küçük değeri bulunur. 
 

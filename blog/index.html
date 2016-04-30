@@ -6,7 +6,7 @@ title: Derin Sular
 	<ul class="posts">
 
 	  {% for post in site.posts %}
-	    <li><h3><span>{{ post.date | date_to_string }}</span> »</h3> <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
+	    <li><b><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></b><br />
 	    	{{ post.excerpt | remove: '<p>' | remove: '</p>' }}<br />
 	    </li>
 	  {% endfor %}

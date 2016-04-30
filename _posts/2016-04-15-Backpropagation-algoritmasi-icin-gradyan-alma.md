@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Backpropagation Algoritması İçin Temel Gradyan Alma İşlemleri"
+title: "Backpropagation Algoritması İçin Gradyan Alma"
 date: 2016-04-15
 ---
 Makine Öğrenmesi'nde backpropagation gibi öğrenme algoritmalarında sonuç bulunur ve hata geriye doğru işletilerek minimize edilmeye çalışılır.<!--more--> Hatanın geriye doğru işlemesini sağlamak için girdi (input) değerlerine göre kısmi türevler alınır. Sonucun (hatanın) girdilere göre alınmış kısmi türevlerine özel olarak gradyan deniyor. 

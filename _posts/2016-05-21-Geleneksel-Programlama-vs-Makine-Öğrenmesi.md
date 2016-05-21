@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Makine Öğrenmesi vs. Geleneksel Programlama"
+title: "Geleneksel Programlama vs. Makine Öğrenmesi"
 date: 2016-05-21
 ---
 KDnuggets sitesinde [1] denk geldiğim klasik yazılım mühendisliği ile makine öğrenmesinin arasındaki farkı güzel anlatan bir yazıyı Türkçeye çevirip kendi blogumda da yayınlamak istedim.<!--more--> Bu tür bir yazıyı başka bloglarda da görmüştüm ancak bunun daha derli toplu olduğunu düşünüyorum:

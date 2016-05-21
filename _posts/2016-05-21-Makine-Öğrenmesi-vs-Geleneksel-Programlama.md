@@ -18,10 +18,10 @@ Makine öğrenmesi ise otomasyon işini otomatikleştirmeyle uğraşır (otomati
 </table>
 
 Geleneksel programlamada, kuralları kodlarız ve verileri bilgisayara verir, bilgisayarın istenilen sonucu vermesini bekleriz:
-<b>Kurallar + veri -> bilgisayar -> sonuçlar</b>
+<ul><li><b>Kurallar + veri -> bilgisayar -> sonuçlar</b></li></ul>
 
 Makine öğrenmesinde verileri alırız (epostalar), istenilen sonuca uygun bilgileri sağlarız ("çöp" ve "çöp olmayan" diye etiketleriz) ve bu bilgileri bir öğrenme algoritmasına sunarız. Bilgisayar bizim istediğimiz sonuca ulaşmak için kendiliğinden kuralları öğrenecektir:
-<b>Sonuçlar + veri -> öğrenme algoritması + bilgisayar -> kurallar</b>
+<ul><li><b>Sonuçlar + veri -> öğrenme algoritması + bilgisayar -> kurallar</b></li></ul>
 
 Diğer ifadeyle, makine öğrenmesi bir görevi otomatikleştirmek için en iyi komutları bulmaktadır. Makine öğrenmesi algoritmaları veriden hareket ederek komutlar bulmaya yarayan komutlardır denebilir. Bu yüzden makine öğrenmesi otomatikleştirmenin otomatikleştirilmesidir.
 

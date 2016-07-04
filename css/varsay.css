@@ -1,7 +1,7 @@
 body {
     margin: 10px auto;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    font-size:1.3em;
+    font-size:1.2em;
     /*width: 100%;*/
 }
 #sol {
@@ -47,6 +47,7 @@ body {
     margin-bottom: 15px;
     text-align: center;
     float: right;
+    display: inline-block;
     margin-right: 15px;
 }
 
@@ -54,6 +55,7 @@ body {
     width: 160px;
     height: 80px;
     float: right;
+    display: inline-block;
     margin-right: 15px;
 }
 

@@ -1,6 +1,7 @@
 body {
     margin: 10px auto;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size:1.3em;
     /*width: 100%;*/
 }
 #sol {

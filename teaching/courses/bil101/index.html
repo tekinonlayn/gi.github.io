@@ -1,1 +1,604 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Course homepage for BBM 406: Introduction to Machine Learning">
+
+<title>BBM 101 - Introduction to Programming I</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:200">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+</head>
+<body>
+
+<style>
+table td, table td * {
+    vertical-align: top;
+}
+
+.avatar {
+    border-radius: 96px;
+    display: block;
+    margin: 0 auto;
+}
+
+h2.content-subhead {
+	margin-top: 0.25em;
+	margin-bottom: 0em;
+}
+h3.content-subhead {
+	margin-top: 0em;
+	margin-bottom: 0em;
+	text-align:center; 
+	font-size:large; 
+	margin-top:3px; 
+	margin-bottom:10px;
+}
+.custom-menu-wrapper {
+    background-color: #ffffff;
+    margin-bottom: 0em;
+    white-space: nowrap;
+    position: relative;
+    text-align: center;
+}
+
+.custom-menu {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.custom-menu-top {
+    position: relative;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.custom-menu-brand {
+    display: block;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.custom-menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: none;
+}
+
+.custom-table-format {
+	border: 0 none;
+	border-collapse:collapse;
+	table-layout:fixed;
+}
+
+.custom-table-format td {
+	border: 0 none;
+	padding: 3px;
+	text-align: left;
+	tex
+}
+
+.custom-menu-toggle .bar {
+    background-color: black;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-menu-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-menu-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-menu-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.custom-menu-screen {
+    background-color: rgba(255,255,255,1.0);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 3em;
+    width: 70em;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.custom-menu-tucked .custom-menu-screen {
+    -webkit-transform: translateY(-44px);
+    -moz-transform: translateY(-44px);
+    -ms-transform: translateY(-44px);
+    transform: translateY(-44px);
+}
+
+h3 {
+	font-weight: 300;	
+}
+    
+a {
+    color: #428bca;
+    text-decoration: none
+}
+
+a:hover, a:focus {
+    color: #2a6496;
+    text-decoration: underline
+}
+
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+@media (max-width: 62em) {
+
+	a, a:visited {
+        text-decoration: underline
+    }
+    
+    .custom-menu {
+        display: block;
+    }
+    
+    .custom-menu-brand {
+	    color: white;
+	    margin-bottom: 1em;
+    }
+
+    .custom-menu-toggle {
+        display: block;
+        display: none\9;
+    }
+
+    .custom-menu-bottom {
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: #ffffff\9;
+        z-index: 100;
+    }
+
+    .custom-menu-bottom .pure-menu-link {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
+        -webkit-transform: translateX(-140px);
+        -moz-transform: translateX(-140px);
+        -ms-transform: translateX(-140px);
+        transform: translateX(-140px);
+        opacity: 0;
+        opacity: 1\9;
+    }
+
+    .pure-menu-horizontal.custom-menu-tucked {
+        z-index: -1;
+        top: 45px;
+        position: absolute;
+        overflow: hidden;
+    }
+
+}
+</style>
+<div class="custom-menu-wrapper">
+    <div class="pure-menu custom-menu custom-menu-top">
+    	<a href="#" class="pure-menu-heading custom-menu-brand"></a>
+        <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+    </div>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+        <div class="custom-menu-screen"></div>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="index.html#div_courseinfo" class="pure-menu-link">Course Information</a></li>
+            <li class="pure-menu-item"><a href="index.html#div_books" class="pure-menu-link">Reference Books</a></li>
+            <li class="pure-menu-item"><a href="index.html#div_schedule" class="pure-menu-link">Schedule</a></li>
+            <li class="pure-menu-item"><a href="index.html#div_assignments" class="pure-menu-link">Assignments</a></li>
+            <li class="pure-menu-item"><a href="https://piazza.com/hacettepe.edu.tr/fall2017/bbm101" class="pure-menu-link">Piazza</a></li>
+            <li class="pure-menu-item"><a href="index.html#div_resources" class="pure-menu-link">Resources</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+(function (window, document) {
+document.getElementById('toggle').addEventListener('click', function (e) {
+    document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
+    document.getElementById('toggle').classList.toggle('x');
+});
+})(this, this.document);
+</script>
+
+    <div id="main">
+        <div class="header">
+            <h1>BBM 101 - Introduction to Programming I</h1>
+            <h2>Fall 2018</h2>
+        </div>
+		
+		<div class="pure-u-1">
+        <img class="pure-img" src="Babbage-Analytical-Engine.jpg" alt="Mark I Perceptron">
+        <blockquote class="content-quote">
+        Drawing of Analytical Engine. Image: <a href="http://www.cl.cam.ac.uk/~djg11/howcomputerswork/">University of Cambridge</a>
+		</blockquote>
+		</div>
+		
+		<div class="pure-u-1">
+			<div class="pure-u-2-24"></div>
+			<div class="pure-u-20-24">
+				<div id="div_courseinfo">
+				<h1 class="content-subhead">Course Information</h1>
+				<h2 class="content-subhead">Course Description</h2>
+				<p>This course serves as an introduction to the fundamentals of computer science and programming. It aims to help students with little or no programming experience to gain necessary skills to work with abstract notions for solving computational problems. The course is structured around basic topics such as control flow, functions, lists, input and output, simple data structures (sets, dictionaries), testing and debugging, recursion and pointers. The class will use the Python and C programming languages as a medium to provide a basic understanding of basic concepts in computer science, and the students will gain hand-on experience via a set of programming assignments supplied in the complementary BBM 103 Introduction to Programming Practicum.</p>
+				<h2 class="content-subhead">Time and Location</h2>
+				<h3>BBM 101</h3>
+				<p>Section 1: Wednesday at 13:00-14:50, Thursday at 09:00-09:50 in Clasroom D1<br>
+				 Section 2: Wednesday at 13:00-15:50 in Clasroom D2<br>
+				 Section 3: Wednesday at 13:00-15:50 in Clasroom D3</p>
+				<h3>BBM 103</h3>
+				<p>Lab Section 1: Thursday at 10:00-11:50 in Comp. Lab <br>
+				Lab Section 2: Friday at 13:00-14:50 in Comp. Lab <br>
+				Lab Section 3: Friday at 15:00-16:50 in Comp. Lab <br>
+				</p>
+					
+				<h2 class="content-subhead">Instructors</h2>
+				<div class="pure-g">
+					<div class="pure-u-1-3">
+				    	<center>
+				    	<h2 class="content-subhead"></h2>
+				    	<img class="avatar" alt="Aykut Erdem's avatar" height="96" width="96" src="img/aykut-avatar.png"><br><h3 class="content-subhead">Aykut Erdem(Section 1)</h3>
+						<i class="fa fa-paper-plane-o"></i> aykut@cs.hacettepe.edu.tr<br><br>Office Hours:<br>Thursday<br>15:00-16:00<br>Office 111<br>
+						<i class="fa fa-home"></i> <a href="http://web.cs.hacettepe.edu.tr/~aykut">http://web.cs.hacettepe.edu.tr/~aykut</a>
+				    	</center>
+					</div>
+				    <div class="pure-u-1-3">
+				    	<center>
+				    	<h2 class="content-subhead"></h2>
+				    	<img class="avatar" alt="Fuat Akal's avatar" height="96" width="96" src="img/fuat-avatar.png"><br><h3 class="content-subhead">Fuat Akal (Section 2)</h3>
+						<i class="fa fa-paper-plane-o"></i> akal@cs.hacettepe.edu.tr<br><br>Office Hours:<br>Open door<br>Office 202<br>
+						<i class="fa fa-home"></i> <a href="http://yunus.hacettepe.edu.tr/~akal/">http://yunus.hacettepe.edu.tr/~akal/</a></center>
+					</div>
+					<div class="pure-u-1-3">
+				    	<center>
+				    	<h2 class="content-subhead"></h2>
+				    	<img class="avatar" alt="Aydın Kaya's avatar" height="96" width="96" src="img/aydin-avatar.jpg"><br><h3 class="content-subhead">Aydın Kaya(Section 3)</h3>
+				    	<i class="fa fa-paper-plane-o"></i> aydinkaya@cs.hacettepe.edu.tr<br><br>Office Hours:<br>Thursday<br>15:00-16:00<br>D1 or D2<br>
+						<i class="fa fa-home"></i> <a href="http://web.cs.hacettepe.edu.tr/~aydinkaya/">http://web.cs.hacettepe.edu.tr/~aydinkaya</a></center><!--http://yunus.hacettepe.edu.tr/~akal/</a>--><br><br>
+				    	</center>
+					</div>
+				    
+				</div>
+		
+				<h2 class="content-subhead">Teaching Assistants</h2>
+				<div class="pure-g">
+					<div class="pure-u-1-3"><center>
+				    	<h2 class="content-subhead"></h2>
+				    	<img class="avatar" alt="Ahmet Selman Bozkir's avatar" height="96" width="96" src="img/selman-avatar.jpg"><br><h3 class="content-subhead">Ahmet Selman Bozkır</h3>
+				    	<i class="fa fa-paper-plane-o"></i> selman@cs.hacettepe.edu.tr<br><br>Office Hours:<!--<br>Monday<br>13:00-14:00--><br>Office 222
+<br></center>
+					</div>
+				    <div class="pure-u-1-3"><center>
+				    	<h2 class="content-subhead"></h2>
+				    	<img class="avatar" alt="Bahar Gezici's avatar" height="96" width="96" src="img/bahar-avatar.jpg"><br><h3 class="content-subhead">Bahar Gezici</h3>
+				    	<i class="fa fa-paper-plane-o"></i> bahargezici@cs.hacettepe.edu.tr<br><br>Office Hours:<br>Tuesday<br>14:00-15:00<br>Research Lab. 1<br></center>
+					</div>
+					<div class="pure-u-1-3"><center>
+				    	<h2 class="content-subhead"></h2>
+				    	<img class="avatar" alt="Feyza Nur Kılıcaslan's avatar" height="96" width="96" src="img/feyzanur-avatar.jpg"><br><h3 class="content-subhead">Feyza Nur Kılıcaslan</h3>
+				    	<i class="fa fa-paper-plane-o"></i> feyzanur@cs.hacettepe.edu.tr<br><br>Office Hours:<br><!--Tuesday<br>14:00-15:00--><br>Research Lab. 1<br></center>
+					</div>
+					<div class="pure-u-1-3"><center>
+				    	<h2 class="content-subhead"></h2>
+				    	<img class="avatar" alt="Nebi Yilmaz's avatar" height="96" width="96" src="img/nebi-avatar.jpg"><br><h3 class="content-subhead">Nebi Yilmaz</h3>
+				    	<i class="fa fa-paper-plane-o"></i> yilmaz@cs.hacettepe.edu.tr<br><br>Office Hours:<br><!--Tuesday<br>13.00-15.00--><br>Research Lab. 1</center>
+					</div>
+				</div>
+				
+				<h2 class="content-subhead"><br>Communication</h2>
+				<p>The course webpage will be updated regularly throughout the semester with lecture notes, programming and reading assignments and important deadlines. All other course related communications will be carried out through Piazza. Please enroll the corresponding class pages by following the links <a href="https://piazza.com/hacettepe.edu.tr/fall2018/bbm101">https://piazza.com/hacettepe.edu.tr/fall2018/bbm101</a> and <a href="https://piazza.com/configure-classes/fall2018/bbm103">https://piazza.com/configure-classes/fall2018/bbm103</a>.</p>
+				<h2 class="content-subhead">Pre-requisites</h2>
+				<p>Students are not expected to have any prior programming experience.</p>
+				<h2 class="content-subhead">Course Requirements and Grading</h2>
+				<p>Grading for BBM 101 will be based on
+				<ul>
+				<li>two midterm exams (25%+30%),</li>
+				<li>a final exam (40%), and</li>
+				<li>class participation (5%).</li>
+				</ul>
+				In BBM 103, the grading will be based on
+				<ul>
+				<li>a set of quizzes (25%),</li>
+				<li>five programming assignments (5+4*15=65%) (done individually), and</li>
+				<li>class participation (10%)</li>
+				</ul>
+				</p>
+				<h2 class="content-subhead">Policies</h2>
+		        <p>All work on assignments must be done individually unless stated otherwise. You are encouraged to discuss with your classmates about the given assignments, but these discussions should be carried out in an abstract way. That is, discussions related to a particular solution to a specific problem (either in actual code or in the pseudocode) will not be tolerated.</p>
+				<p>In short, turning in someone else’s work, in whole or in part, as your own will be considered as a violation of academic integrity. Please note that the former condition also holds for the material found on the web as everything on the web has been written by someone else.</p>
+				</div>
+				<p><i class="fa fa-angle-up fa-fw"></i><a href="#">back to top</a></p>			
+				<div id="div_books">
+				<h1 class="content-subhead">Reference Books</h1>
+				<ul>
+				<li><p><a href="https://www.cs.hmc.edu/csforall/">CS for All</a>, Christine Alvarado, Zachary Dodds, Geoff Kuenning, Ran Libeskind-Hadas, 2013</li>
+				<li><p><a href="https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-second-edition">Introduction to Computation and Programming Using Python, Second Edition</a>, John V. Guttag, MIT Press, August 2016</p></li>
+				<li><p>The Python Tutorial (<a href="https://docs.python.org/3.5/tutorial/">available from the Python website</a>)</p></li>
+				<li><p>Think Python, 2nd edition, Allen B. Downey (<a href="http://greenteapress.com/thinkpython2/thinkpython2.pdf">freely available online</a>) (<a href="http://interactivepython.org/runestone/static/thinkcspy/index.html")>interactive version</a>)</p></li>
+				<li><p>C How to Program, 6th Edition, Paul Deitel & Harvey Deitel , Prentice Hall, 2010</p></li>				
+				<li><p>The C Programming Language, 2nd Edition, Brian Kernighan and Dennis Ritchie, Prentice Hall, 1988</p></li>				
+				<li><p>Practical C Programming 3rd Edition, Steve Oualline, O'Reilly Media, 1997</p></li>
+				</ul>
+				</div>
+<p><i class="fa fa-angle-up fa-fw"></i><a href="#">back to top</a></p>				
+  				<div id="div_schedule">
+  				<h1 class="content-subhead">Schedule</h1>
+				<table class="pure-table pure-table-horizontal">
+				<thead>
+				<tr>
+					<th>Week</th>
+					<th>Date</th>
+					<th>Topic</th>
+					<th>Notes</th>        
+				</tr>
+				</thead>
+				<tbody>
+				  <tr>
+		            <td>1</td>
+		            <td style="width: 80px;">Oct 10</td>
+		            <td style="width: 600px;">
+				Course Introduction, What is computation? [<a href="lectures/lec1-introduction.pdf">slides</a>]</br>
+				Week 1 Lab Handout [<a href="files/Using_Piazza_Website_Grading_Handout.pdf">Using Piazza, BBM103 Grading Policy</a>]
+				</td>
+		            <td style="width: 800px;">Reading: Guttag 1, Downey 1<br>Video: <a href="http://www.ted.com/talks/george_dyson_at_the_birth_of_the_computer">The birth of the computer</a>, George Dyson</td>
+		          </tr>
+		          
+		          <tr>
+		            <td>2</td>
+		            <td>Oct 17</td>
+		            <td>Computers [<a href="lectures/lec2-computers.pdf">slides</a>] 
+					</br>
+					Week 2 Lab Handouts [<a href="files/Github_classroom _and_linux_commands.pdf">Github Classroom, Linux Commands</a> <!--[<a href="files/bbm103_Linux_Commands_-_Submit_System_Handout.pdf">Linux Commands and Submit System</a>]-->
+					</td>
+		            <td>PA1 out <!--[<a href="files/Assignment1-v1.3.pdf">Assignment1</a>]--><br>Reading: Alvarado et al. 4 (excluding 4.5-3-4.5.4)<br><a href="http://shickey.github.io/HMMM.js">HMMM Simulator</a><!-- [<a href="files/Assignment1.pdf">Assignment1</a>]--></td>
+		          </tr>
+		          
+		          <tr>
+		            <td>3</td>
+		            <td>Oct 24</td>
+		            <td>Introduction to Python [<a href="lectures/lec3-python.pdf">slides</a>]</br>
+		            Week 3 Lab Handouts [<a href="files/HMMM.pdf">Programming in HMMM</a>] <!--[<a href="files/W3exercise.hmmm">Hmmm Example</a>]-->
+					</td>
+					<td>Reading: Guttag 2.1, Downey 5.1-5.3</td>
+		          </tr>
+		          
+		          <tr>
+		            <td>4</td>
+		            <td>Oct 31</td>
+		            <td>Control flow, Functions [<a href="lectures/lec4-controlflow-functions.pdf">slides</a>]</br>
+		            Week 4 Lab Handouts [<a href="files/week4-handout.pdf">Programming Topics</a>] <!--[<a href="files/Week4_Exercises.pdf">Exercises</a>]-->
+		            </td>
+		            
+		            <td>PA1 due<br>Reading: Guttag 2.2-2.4, 3, 4.1-4.2, 4.4, Downey 3, 5.4-5.7</td>
+		          </tr>
+		          
+		          <tr>
+		            <td>5</td>
+		            <td>Nov 7</td>
+		            <td><i>Midterm exam 1</i></br>
+			    Week 5 Lab Handout [<a href="files/Week5_Handout.pdf">Programming Topics</a>]
+					</td>
+		            <td><!--<a href="sample-questions.pdf">Sample midterm questions</a>, -->PA2 out <!--[<a href="files//Assignment2-v1.2.pdf">Assignment2</a>]--><br></td>
+		          </tr>
+		          
+		          <tr>
+		            <td>6</td>
+		            <td>Nov 14</td>
+		            <td>Collections, File I/O [<a href="lectures/lec5-collections-fileIO.pdf">slides</a>]</br>
+			   Week 6 Lab Handout [<a href="files/Week6-Handout.pdf">Exercises</a>]
+					</td>
+		            <td>Reading: Guttag 4.6, 5.1-5.3, 5.5, Downey 10-12, 14.1-14.4, 14.11</td>
+		          </tr>
+		          
+		          <tr>
+		            <td>7</td>
+		            <td>Nov 21</td>
+		            <td>Recursion [<a href="lectures/lec6-recursion.pdf">slides</a>]<br>
+			  Week 7 Lab Handout [<a href="files/Week7_handout.pdf"> Programming Topics</a>]</td>
+					</td>
+					<td>PA2 due (23.11.2018)[<a href="files/assignment2 (1).pdf">Assignment2</a>]<br>Reading: Guttag 4.3, Downey 5.8-5.10, 6.5</td>
+		          </tr>
+		          
+		          <tr>
+		            <td>8</td>
+		            <td>Nov 28</td>
+		            <td>Sorting, List Comprehension, Visualization [<a href="lectures/lec7-sorting-lists-visualization.pdf">slides</a>]<br>
+		            Week 8 Lab Handout [<a href="files/Week8_Handout.pdf">Programming Topics</a>] [<a href="files/Week8Exercise.pdf">Exercise</a>]</td>
+					<td>PA3 out <!-- [<a href="files/Assignment3.pdf">Assignment3</a> - <a href="files/Assignment3_Sample_IO_Guide.pdf">I/O Guide</a>]--> <br>Reading: Guttag 5.3.2, 10.2, 11<br><a href="lectures/RiseSetData.zip">RiseSetData .zip</a></td> 
+		          </tr>
+		          
+		          <tr>
+		            <td>9</td>
+		            <td>Dec 5</td>
+		            <td>Testing and Debugging [<a href="lectures/lec8-testing-debugging.pdf" >slides</a>]<br>
+ 			    Week 9 Lab Handout [<a href="files/Week9-Handout.pdf">Programming Topics</a>] [<a href="files/Week9-Exercise.pdf">Exercise</a>]</td>
+		            
+			   <td>Reading: Guttag 6, 7, Downey Debugging sections of each chapter, Appendix A<br><a href="RiseSetData.zip">RiseSetData.zip</a></td>
+		          </tr>
+		          
+		          <tr>
+		            <td>10</td>
+		            <td>Dec 12</td>
+		            <td>Development Strategies, Algorithmic Complexity [<a href="lectures/lec9-dev-strategies-alg-speed.pdf">slides</a>]<br>
+			   Week 10 Lab Handout [<a href="files/Week10_Handout.pdf">Programming Topics</a>][<a href="files/Week10-exercise.pdf"> Exercise</a>]</td>
+		            <td>PA3 due, PA4 out<!--[<a href="files/Assignment4.rar">Assignment4</a>]--><br>Reading: Guttag 4.2, 9, Downey 3.12, Appendix B</td>
+		          </tr>
+		          
+		          <tr>
+		            <td>11</td>
+		            <td>Dec 19</td>
+		            <td>C for Python programmers [<a href="lectures/lec10_c_part1.pdf" >slides</a>]<br>
+		           Week 11 Lab Handout [<a href="files/week11_handout.pdf">Programming Topics</a>]</td>
+		            <td> Reading: Deitel & Deitel (C How to Program) 2, 3.1-3.6, Kernighan and Ritchie 2, 3.1-3.3 </td>
+		          </tr>
+		          
+		          <tr>
+		            <td>12</td>
+		            <td>Dec 26</td>
+					<td><i>Midterm exam 2</i></br>
+					<!--Week 12 Lab Handout  [<a href="files/Week12_Handout.pdf">Programming Topics</a>]--><br><!--[<a href="files/Week12-exercise.pdf">Exercise</a>]--></td>
+</td>
+		            <td>PA4 due, PA5 out <!-- [<!-- <a href="files/Assignment5.rar">Assignment5</a>]--> <br>Reading: <a href="readings/the-resurgence-of-c-programming.pdf">The Resurgence of C Programming: Do You Still Need to Write Code to Build Cool Machines?</a>, Mike Barlow</td>
+		          </tr>
+		          
+		          <tr>
+		            <td>13</td>
+		            <td>Jan 2</td>
+		            <td>Switch statement, Loops and Functions in C [<a href="lectures/lec11_c_part2.pdf" >slides</a>]
+				</br></br>
+			Week 13 Lab Handout [<a href="files/week13_handout.pdf">Programming Topics</a>][<a href="files/week13_exercise .pptx"> Exercise</a>]</td>
+		            <td>Reading: Kernighan and Ritchie 3,4, Deitel & Deitel (C How to Program) 4,5.1-5.6,6</td>
+		          </tr>
+		          
+		          <tr>
+		            <td>14</td>
+		            <td>Jan 9</td>
+		            <td>Pointers and Strings [<a href="lectures/lec12_c_part3.pdf">slides</a>]
+		            <td>PA5 due </br> Reading: Kernighan and Ritchie 5.1-5.5, B3, Deitel & Deitel (C How to Program) 7.1-7.9, 8.1-8.6</td>
+		          </tr>
+		          		       
+				</tbody>
+				</table>
+  				</div>
+				
+  				<p><i class="fa fa-angle-up fa-fw"></i><a href="#">back to top</a></p>
+  				
+				<div id="div_assignments">
+				<h1 class="content-subhead">Programming Assignments</h1>
+				<p>
+					<ul>
+						<li><!-- <a href="files/Assignment1-v1.3.pdf">--> Assignment 1</a> <!--(Due: Oct 18, 2017 (23:59:59))--></li>
+						<li><!-- <a href="files/Assignment2-v1.2.pdf">-->Assignment 2</a> <!--(Due: Nov 8, 2017 (23:59:59))--></li>
+						<li><!-- <a href="files/Assignment3.pdf">--> Assignment 3</a> <!-- <a href="files/Assignment3_Sample_IO_Guide.pdf">I/O Guide --> </a> <!--(Due: Nov 29, 2017 (23:59:59))--> </li>
+						<li><!-- <a href="files/Assignment4.pdf">--> Assignment 4</a> <!--(Due: Dec 13, 2017 (23:59:59))--></li>
+						<li><a href="files/Assignment5-19 .pdf">Assignment 5</a>(Due: Jan 12, 2019 (23:59:59))</li> 
+					</ul>
+				</p>
+				</div>
+				<p><i class="fa fa-angle-up fa-fw"></i><a href="#">back to top</a></p>
+
+  				<div id="div_resources">
+  				<h1 class="content-subhead">Resources</h1>
+				<h2 class="content-subhead">General purpose text editors</h2>
+				<ul>
+					<li><a href="http://www.vim.org/">Vim</a> (Linux, OS X, Windows)</li>
+					<li><a href="http://www.gnu.org/software/emacs/">Emacs</a> (Linux, OS X, Windows)</li>
+					<li><a href="http://www.sublimetext.com/">Sublime Text</a> (Linux, OS X, Windows)</li>
+					<li><!--<a href="files/student.txt">-->Week 10 Exercise Input File</a></li>
+				</ul>
+				
+				<h2 class="content-subhead">Setting up Python</h2>
+				<p>PyCharm Edu Integrated Development Environment (IDE) will be used in laboratory classes for learning how to program with Python.</p>
+				<ul>
+					<li><a href="files/bbm103_Python_Installation_Guide.pdf">PyCharm Edu and Python Installation Guide</a></li>
+					<li><a href="https://www.jetbrains.com/pycharm-edu/quickstart/index.html">Getting Started with PyCharm Edu - a quickstart manual</a></li>
+					<li><a href="files/bbm103_Compiling_Guide.pdf">Guide to compiling your code on department servers</a></li>
+				</ul>
+				
+  
+				<h2 class="content-subhead">Resources for C language</h2>
+				<ul>
+					<li><a href="http://www.acm.uiuc.edu/webmonkeys/book/c_guide/">The C Library Reference Guide</a></li>
+					<li><a href="http://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf">ISO/IEC 9899 Committee Draft</a></li>
+					<li><a href="https://www.hackerschool.com/blog/5-learing-c-with-gdb">Learning C with GDB</a></li>
+					<li><a href="http://c-faq.com/">C FAQ</a></li>
+				</ul>
+  
+				<h2 class="content-subhead">Tools for C</h2>
+				<h3>Standard Environment</h3>
+				<p>The most efficient way of developing a C program is to use a Unix environment:</p>
+				<ul>
+					<li>Command-line</li>
+					<li>Compiler: gcc</li>
+					<li>Debugger: gdb, valgrind</li>
+					<li>Editor: Vim, Emacs, or Sublime Text</li>
+				</ul>
+  
+				<p>To mimic a Unix programming environment on your own computer, you have the following options:</p>
+				<ul>
+					<li>On a Linux distribution: <code>sudo apt-get install build-essential</code> or equivalent.</li>
+					<li>On Mac OS 10.6.6 or later: Install Xcode from the App Store, open it, go to Preferences > Downloads > Components and download "Command Line Tools".</li>
+					<li>On Windows: Install cygwin. Please check the packages <code>gcc-core</code>, <code>gcc-g++</code>, <code>gdb</code>.</li>
+				</ul>
+  
+  				<h3>IDEs for C</h3>
+  				<p>Your programs need to work in the standard environment as we evaluate them on <code>dev.cs.hacettepe.edu.tr</code>. However, if you'd like to use a GUI, these are the IDEs that seem to work well:</p>
+	  			<ul>
+		  			<li><a href="http://www.codeblocks.org"</a>Code::Blocks</a> (Linux, Mac OS X, Windows)</li>
+		  			<li><a href="http://www.eclipse.org/downloads/packages/eclipse-ide-cc-developers/junosr1">Eclipse</a> (Linux, Mac OS X, Windows)</li>
+		  			<li><a href="https://itunes.apple.com/us/app/xcode/id497799835">Xcode</a> (Mac OS X)</li>
+		  			<li>Visual Studio (Windows)</li>
+		  		</ul>
+		  		
+		  		<h2 class="content-subhead">Previous editions</h2>
+				<ul>
+					<li><a href="fall17/index.html">2017</a></li>
+					<li><a href="fall16/index.html">2016</a></li>
+					<li><a href="fall15/index.html">2015</a></li>
+					<li><a href="fall14/index.html">2014</a></li>
+				</ul>
+				
+  			<p><i class="fa fa-angle-up fa-fw"></i><a href="#">back to top</a></p>	
+			</div>
+			<div class="pure-u-2-24"></div>
+		</div>
+    </div>
+
+<script src="js/ui.js"></script>
+
+<hr>
+<h3 class="content-subhead">© 2018 Hacettepe University</h3>
+</body>
+</html>
+
